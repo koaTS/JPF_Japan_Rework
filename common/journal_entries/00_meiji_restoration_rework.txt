@@ -1,0 +1,362 @@
+﻿je_kurofune = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	is_shown_when_inactive = {
+		exists = c:JAP
+		c:JAP = ROOT
+		NOT = { 
+			OR ={ 
+				has_law = law_type:law_free_trade
+				has_law = law_type:law_mercantilism
+			}
+		}
+		NOT = { has_variable = kurofune_complete }
+	}
+
+	possible = {
+		game_date > 1853.07.07
+	}
+
+	complete = {
+		has_law = law_type:law_free_trade
+	}
+
+	on_complete = {
+		set_variable = kurofune_complete
+	}
+
+	timeout = 220
+
+	should_be_pinned_by_default = yes
+
+	on_timeout = {
+		trigger_event = { id = kurofune.10 }
+		set_variable = kurofune_complete
+	}
+	progressbar = yes
+	weight = 100
+}
+
+
+#Emperor's decision about treaty
+je_kurofune2 = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	complete = {
+		game_date > 1858.07.29
+	}
+
+	on_complete = {
+		trigger_event = { id = kurofune.20 }
+	}
+
+	should_be_pinned_by_default = yes
+
+	progressbar = yes
+	weight = 100
+}
+
+je_sakurada = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	complete = {
+		ig:ig_landowners = {
+			is_in_government = no
+		}
+	}
+
+	on_complete = {
+
+		ig:ig_landowners = {
+	        add_modifier = {
+	            name = sakurada
+	            months = 12
+	        }
+		}
+		set_variable = sakurada_complete
+		trigger_event = { id = kurofune.40 }
+	}
+
+	timeout = 3650
+
+	should_be_pinned_by_default = yes
+
+	on_timeout = {
+	    ig:ig_landowners = {
+	        add_modifier = {
+	            name = satisfied_bakufu
+	            months = 12
+	        }
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+	progressbar = yes
+	weight = 100
+}
+
+je_boshin_war_nip = {
+	is_shown_when_inactive = {
+		exists = c:NIP c:NIP = THIS
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	complete = {
+		# If-else clause to avoid errors because of missing variable before JE activates
+		trigger_if = {
+			limit = { exists = var:boshin_var }
+			scope:journal_entry = { is_goal_complete = yes }
+		}
+		trigger_else = {
+			custom_tooltip = je_boshin_goal
+		}
+	}
+
+	
+	on_complete = {
+		trigger_event = { id = kurofune.53}
+	}
+
+
+	current_value = {
+		value = root.var:boshin_var
+	}
+
+	goal_add_value = {
+		value = 3
+	}
+	weight = 10000
+	progressbar = yes
+
+}
+
+je_boshin_war_jap = {
+	is_shown_when_inactive = {
+		exists = c:JAP c:JAP = THIS
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	complete = {
+		# If-else clause to avoid errors because of missing variable before JE activates
+		trigger_if = {
+			limit = { exists = var:boshin_var }
+			scope:journal_entry = { is_goal_complete = yes }
+		}
+		trigger_else = {
+			custom_tooltip = je_boshin_goal
+		}
+	}
+
+	
+	on_complete = {
+		trigger_event = { id = kurofune.50}
+	}
+
+
+	current_value = {
+		value = root.var:boshin_var
+	}
+
+	goal_add_value = {
+		value = 3
+	}
+	weight = 10000
+	progressbar = yes
+
+}
+
+
+
+
+je_meiji_formation = {
+	
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	is_shown_when_inactive = {
+		exists = c:NIP
+		c:NIP = ROOT
+
+		NOT = { has_global_variable = meiji_rework_complete }
+		NOT = { has_global_variable = meiji_rework_complete }
+	}
+
+	immediate = {
+		set_variable = {
+			name = boshin_var
+			value = 0
+		}
+	}
+
+	possible = {
+		has_technology_researched = mass_communication
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			30 = jap_relation.40
+			10 = jap_relation.30
+		}
+	}
+
+	complete = {
+		has_technology_researched = nationalism
+		s:STATE_KANTO = {
+				any_scope_state = {
+					owner = {
+						OR = {
+							c:NIP = THIS
+							is_subject_of = c:NIP
+						}
+					}
+				}
+			}
+	}
+
+	on_complete = {
+		trigger_event = { id = kurofune.100  }
+		set_global_variable = meiji_rework_complete
+	}
+
+	should_be_pinned_by_default = yes
+	weight = 100
+}
+
+je_bakufu_formation = {
+	
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	is_shown_when_inactive = {
+		exists = c:JAP
+		c:JAP = ROOT
+		NOT = { has_global_variable = meiji_rework_complete }
+	}
+
+	immediate = {
+		set_variable = {
+			name = boshin_var
+			value = 0
+		}
+	}
+
+	possible = {
+		has_technology_researched = mass_communication
+		is_subject = no
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = jap_relation.10
+			10 = jap_relation.20
+		}
+	}
+
+	complete = {
+		has_technology_researched = nationalism
+		s:STATE_KANSAI = {
+				any_scope_state = {
+					owner = {
+							c:JAP = THIS
+					}
+				}
+			}
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = exhibition_events.4
+			10 = exhibition_events.5
+			10 = exhibition_events.6
+			10 = exhibition_events.7
+			30 = exhibition_events.8
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = kurofune.101 }
+		set_global_variable = meiji_rework_complete
+	}
+
+	weight = 100
+}
+
+
+je_support_meiji_bakufu = {
+	
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	is_shown_when_inactive = {
+		country_has_primary_culture = cu:japanese
+
+		NOT ={ OR = {c:JAP = ROOT c:NIP = ROOT} }
+
+	}
+
+	possible = {
+		has_technology_researched = mass_communication
+	}
+
+	complete = {
+		c:JAP = {relations:root > 75}
+	}
+
+	on_complete = {
+		c:JAP = { trigger_event = { id = kurofune.41 } }
+		trigger_event = { id = kurofune.43 }
+	}
+
+	fail = { c:NIP = {relations:root > 75} }
+
+	on_fail = { 
+		c:NIP = { trigger_event = { id = kurofune.42 } } 
+		trigger_event = { id = kurofune.44 }
+	}
+
+	weight = 100
+}
+
+
+
+
+je_defend_jap = {
+	
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	is_shown_when_inactive = {
+		country_has_primary_culture = cu:japanese
+		NOT ={ OR = {c:JAP = ROOT c:NIP = ROOT c:RYU = ROOT} }
+
+		OR = {
+			NOT ={ exists = c:NIP }
+			c:NIP = { is_subject_type = subject_type_vassal }
+			AND = {is_subject=yes NOT={is_subject_of= c:JAP}}
+		}
+		NOT = { has_global_variable = meiji_rework_complete }
+		
+	}
+
+	possible = {
+	}
+
+
+	timeout = 90
+
+	should_be_pinned_by_default = yes
+
+	on_timeout = {
+		trigger_event = { id = kurofune.102 }
+	}
+
+	invalid = {has_global_variable = meiji_rework_complete}
+
+	weight = 100
+}

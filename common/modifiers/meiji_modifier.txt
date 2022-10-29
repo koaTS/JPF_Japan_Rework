@@ -1,0 +1,18 @@
+﻿ansei_purge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -10
+	interest_group_pop_attraction_mult = -0.5
+}
+
+sakurada = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -10
+	interest_group_pop_attraction_mult = -0.5
+}
+
+
+satisfied_bakufu = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_pol_str_mult = 0.1
+	interest_group_approval_add = 1
+}

@@ -1,0 +1,124 @@
+﻿?l_english:
+#decision
+ boshin_decision: ""
+ boshin_decision_desc: ""
+
+# Heukseon Inner Port. The situation came back a year after the first expedition. Signed the Treaty of Peace and Friendship between the United States and Japan. Events for the Shogunate
+ kurofune.10: ""
+ kurofune.10.t: "The Return of Kurofune"
+ kurofune.10.d: "Admiral Perry has returned to Japan after a year. Judging from the chaos within the shogunate and the lack of military power, there seems to be no other way than to open the port."
+ kurofune.10.f: "Article 1. Eternal peace will be established between the two countries and the peoples of the United States and Japan, regardless of person or place.\nArticle 2. Shimoda and Hakodate ports will be opened\nArticle 9. United States give most-favored-nation treatment to
+ kurofune.10.a: "Hundreds of years of isolation are over."
+#4 years later, the Treaty of Amity and Commerce between the United States and Japan. This is an event for the Emperor. Option a: Deny the treaty. Option b: Grant the treaty
+ kurofune.20: ""
+ kurofune.20.t: "Emperor's Charter"
+ kurofune.20.d: "America's sheep demanded commerce and held out brushes and papers. Without the Emperor's decree, there would be no treaty, but 88 venerables and the Yangyi faction usually opposed it, and the Nanki faction, who supported the current shogun, generally agreed. are talking."
+ kurofune.20.f: "They say 'Western countries want the whole world to become one family through steam communication', but how can you believe the sheep?"
+ kurofune.20.a: "I am not able to charter commerce with sheep."
+ kurofune.20.b: "I bid commerce with sheep."
+#20.aThe event that happens to the shogunate after. After the discovery of innocence, it a. causes the Ansei Daeok b. does not cause it.
+ kurofune.30: ""
+ kurofune.30.t: "Infallible"
+ kurofune.30.d: "It turns out that the emperor sent the Yangyi daimyo to the Yangyi daimyo with a message to encourage them. It is clearly against the procedure for the emperor to directly give orders to the daimyo without going through the shogunate."
+ kurofune.30.f: "It is clear that the emperor sent such a message because the court and the Hitsutobashi sect, who were dissatisfied with the shogunate, plotted around the emperor!"
+ kurofune.30.a: "Capture the daimyo who received the push and all those who support it!"
+ kurofune.30.b: "Blood only brings blood."
+#20.b An event that happens to the shogunate after. I didn't find the push paper, but anyway a. causes b. not cause
+ kurofune.31: ""
+ kurofune.31.t: "Ansei's Doubt"
+ kurofune.31.d: "There are still people who are dissatisfied with the shogunate even though the commerce treaty was signed with the Emperor's decree."
+ kurofune.31.f: "The Hitotsubashi sects who only oppose what the shogunate is doing, even though the Emperor himself has ordered it, are like enemies. They may be preparing to do something, so we need to investigate."
+ kurofune.31.a: "Catch the Hitotsubashi and the Yangyi sects!"
+ kurofune.31.b: "What can they do?"
+#Sakuradamun. An assassination event that occurs when journal conditions are met.
+ kurofune.40: ""
+ kurofune.40.t: "The side outside the Sakurada Gate"
+ kurofune.40.d: "Mito clan samurai, hidden among those who watched the daimyo procession entering Kyoto, broke into the procession and assassinated Naosuke Ii in a palanquin."
+ kurofune.40.f: "Why do the Hitone clan bastards catch good ducks in kilns and not nets?"
+ kurofune.40.a: "Ii's red ghost's clothes are stained red."
+# Join the shogunate side. It is a Japanese unification event chain. When the relationship increases, it is merged with the shogunate. A dummy event that happens to the Shogunate
+ kurofune.41: ""
+ kurofune.41.t: "The Confluence of the Left"
+ kurofune.41.d: "There are still a lot of people who say they need the shogunate. One daimyo wants to join the shogunate."
+ kurofune.41.f: "The Emperor is a close friend of the Emperor himself, and there should be no harm to the prison.
+ kurofune.41.a: "Welcome to the Shogunate."
+# Join the Emperor's side. It is a Japanese unification event chain. When the relationship level increases, it is merged with the emperor. A dummy event that happens to the emperor
+ kurofune.42: ""
+ kurofune.42.t: "The Confluence of the Shamans"
+ kurofune.42.d: "A daimyo who wanted to overthrow the shogunate, saying that the emperor should come to his house, decided to stand with us."
+ kurofune.42.f: "The Shogunate is nothing more than a nemesis who distorts the Emperor's wishes and practices lies. Even with this life, I will protect the Emperor."
+ kurofune.42.a: "Strive to be loyal to the Emperor."
+#An event that is open to the provincial government to join the shogunate. If you are a player, you can play as the Shogunate
+ kurofune.43: ""
+ kurofune.43.t: "Acceptance of the Shogunate"
+ kurofune.43.d: "The Shogunate accepted our opinion that we would be together."
+ kurofune.43.f: ""
+ kurofune.43.a: ""
+ kurofune.43.b: ""
+#An event that floats to the country that joins the Emperor's side. Players can then play as Emperor
+ kurofune.43: ""
+ kurofune.43.t: ""
+ kurofune.43.d: ""
+ kurofune.43.f: ""
+ kurofune.43.a: ""
+ kurofune.43.b: ""
+#Daejeongbonghwan. a. Daejeongbonghwan, who is just talkative as in the present history b. really merged. A player loses? Chain event in 90 days.
+ kurofune.50: ""
+ kurofune.50.t: ""
+ kurofune.50.d: ""
+ kurofune.50.f: ""
+ kurofune.50.a: ""
+ kurofune.50.b: ""
+#The outbreak of the Boshin War
+ kurofune.51: ""
+ kurofune.51.t: "Boshin War"
+ kurofune.51.d: "The shogunate sect raised an army after occupying Kyoto and provoking the imperial powers by unleashing and provoking Edo. The whole of Japan was plunged into the flames of civil war."
+ kurofune.51.f: "Raise your Nishikinomihata higher! Do your best as an official who will punish the rebel Yoshinobu Tokugawa and his vassals for raising an army against the Imperial Court!"
+ kurofune.51.a: "All Japan split in two."
+#Daejeongbonghwan event after 50.b
+ kurofune.52: ""
+ kurofune.52.t: ""
+ kurofune.52.d: ""
+ kurofune.52.f: ""
+ kurofune.52.a: ""
+#If the emperor occupied Kanto in any way, he annexed all of Japan.
+ kurofune.100: ""
+ kurofune.100.t: "Entry into Edo"
+ kurofune.100.d: "After several battles, we succeeded in entering Edo Castle, where the shogunate hid. The shogunate forces declared surrender, and the war was over."
+ kurofune.100.f: "After all, I've been wearing the stigma of a mason, so I can't make any excuses now. I'm just praying for heaven's judgment and apologizing for my mistakes. If we start a war here and it doesn't end well, we will follow the same path as China and India, the empire will be disintegrated, and all people will fall into chaos. It is impossible to endure this."
+ kurofune.100.a: "Long live the Emperor! Long live the new government!"
+#If the shogunate occupies Kansai in any way, it annexes all of Japan.
+ kurofune.101: ""
+ kurofune.101.t: "Enter Kyoto"
+ kurofune.101.d: "We succeeded in defeating the new government forces and bringing His Majesty the Emperor. The new government forces have given up further resistance."
+ kurofune.101.f: "We have come to this day and we have reached the war, but the work of the Empire is in vain!"
+ kurofune.101.a: "The only way of the Empire is reform through the unity of the public."
+#Occurs when the emperor disappears or the shogunate annexed the emperor in a way other than the Boshin War. All times are united in anger.
+ kurofune.102: ""
+ kurofune.102.t: ""
+ kurofune.102.d: ""
+ kurofune.102.f: ""
+ kurofune.102.a: ""
+
+
+#Timer until arrival of journal ferry from Black Vessel Inner Port
+ je_kurofune: ""
+ je_kurofune_reason: ""
+#Emperor's Journal Timer until the Treaty of Protection and Commerce
+ je_kurofune2: ""
+ je_kurofune2_reason: ""
+#Sakuradamun. An event occurs when the shogunate loses support from the landowner class
+ je_sakurada: ""
+ je_sakurada_reason: ""
+#Japan unification event occurs when the emperor wins
+ je_meiji_formation: ""
+ je_meiji_formation_reason: ""
+# Japan unification event occurs when the Shogunate is victorious
+ je_bakufu_formation: ""
+ je_bakufu_formation_reason: ""
+#Journals that happen to bundles. Will you join the shogunate or the emperor?
+ je_support_meiji_bakufu: ""
+ je_support_meiji_bakufu_reason: ""
+#Journal to prevent cheating. Event occurs when the emperor merges for reasons other than the Boshin War
+ je_defend_jap: ""
+ je_defend_jap_reason: ""
