@@ -273,6 +273,18 @@ je_support_meiji_bakufu = {
 		has_technology_researched = mass_communication
 	}
 
+	immediate = {
+		trigger_event = { id = kurofune.45 }
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = jap_relation.50
+			10 = jap_relation.51
+		}
+	}
+
 	complete = {
 		c:JAP = {relations:root > 95}
 	}
