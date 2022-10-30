@@ -29,6 +29,11 @@ kurofune.10 = {
 		name = kurofune.10.a						
         default_option = yes
 
+        every_subject_or_below = {
+			limit = {is_subject_type = subject_type_daimyo}
+			activate_law = law_type:law_mercantilism
+		}
+
         activate_law = law_type:law_mercantilism
 
         c:NIP = {add_journal_entry = {type = je_kurofune2} }
@@ -61,7 +66,13 @@ kurofune.20 = {
 	option = { # Does not allow treaty
 		name = kurofune.20.a						
         default_option = yes
-        c:JAP = { activate_law = law_type:law_free_trade 
+        c:JAP = { 
+
+        	activate_law = law_type:law_free_trade
+        	every_subject_or_below = {
+				limit = {is_subject_type = subject_type_daimyo}
+				activate_law = law_type:law_free_trade
+			} 
        			trigger_event = { id = kurofune.30} 
         }
 
@@ -71,7 +82,12 @@ kurofune.20 = {
 
 	option = { # Allow it
 		name = kurofune.20.b						
-        c:JAP = { activate_law = law_type:law_free_trade 
+        c:JAP = {
+        	activate_law = law_type:law_free_trade
+        	every_subject_or_below = {
+				limit = {is_subject_type = subject_type_daimyo}
+				activate_law = law_type:law_free_trade
+			} 
         		trigger_event = { id = kurofune.31} }
 
         ig:ig_landowners = {
@@ -232,7 +248,8 @@ kurofune.40 = {
 	trigger = {
 	}
 
-	immediate = {	
+	immediate = {
+		set_variable = sakurada_complete
 		every_subject_or_below = {
 			limit = {is_subject_type = subject_type_daimyo}
 			change_relations = {
@@ -478,10 +495,10 @@ kurofune.51 = {
 
 
 	immediate = {
-		every_subject_or_below = {
-			limit = {is_subject_type = subject_type_daimyo}
-			make_independent = yes
-		}	
+#		every_subject_or_below = {
+#			limit = {is_subject_type = subject_type_daimyo}
+#			make_independent = yes
+#		}	
 	}
 	option = { # Japan unification
 		name = kurofune.51.a						
@@ -543,9 +560,9 @@ kurofune.52 = {
 kurofune.53 = {
 	type = country_event
 	placement = root
-	title = kurofune.53.t
-	desc = kurofune.53.d
-	flavor = kurofune.53.f
+	title = kurofune.51.t
+	desc = kurofune.51.d
+	flavor = kurofune.51.f
 
 	event_image = {
 		video = "gfx/event_pictures/asia_politician_parliament_motion.bk2"
@@ -563,15 +580,15 @@ kurofune.53 = {
 
 
 	immediate = {
-		c:JAP = {		
-			every_subject_or_below = {
-				limit = {is_subject_type = subject_type_daimyo}
-				make_independent = yes
-			}
-		}
+#		c:JAP = {		
+#			every_subject_or_below = {
+#				limit = {is_subject_type = subject_type_daimyo}
+#				make_independent = yes
+#			}
+#		}
 	}
 	option = { # Japan unification
-		name = kurofune.53.a						
+		name = kurofune.51.a						
         default_option = yes
 
 

@@ -10,7 +10,7 @@
 				has_law = law_type:law_mercantilism
 			}
 		}
-		NOT = { has_variable = kurofune_complete }
+		NOT = { has_global_variable = kurofune_complete }
 	}
 
 	possible = {
@@ -22,7 +22,7 @@
 	}
 
 	on_complete = {
-		set_variable = kurofune_complete
+		set_global_variable = kurofune_complete
 	}
 
 	timeout = 220
@@ -31,9 +31,8 @@
 
 	on_timeout = {
 		trigger_event = { id = kurofune.10 }
-		set_variable = kurofune_complete
+		set_global_variable = kurofune_complete
 	}
-	progressbar = yes
 	weight = 100
 }
 
@@ -52,7 +51,6 @@ je_kurofune2 = {
 
 	should_be_pinned_by_default = yes
 
-	progressbar = yes
 	weight = 100
 }
 
@@ -61,19 +59,11 @@ je_sakurada = {
 
 	complete = {
 		ig:ig_landowners = {
-			is_in_government = no
+			ig_approval < 5
 		}
 	}
 
 	on_complete = {
-
-		ig:ig_landowners = {
-	        add_modifier = {
-	            name = sakurada
-	            months = 12
-	        }
-		}
-		set_variable = sakurada_complete
 		trigger_event = { id = kurofune.40 }
 	}
 
@@ -99,6 +89,8 @@ je_sakurada = {
 je_boshin_war_nip = {
 	is_shown_when_inactive = {
 		exists = c:NIP c:NIP = THIS
+		exists = c:JAP
+		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
 	possible = {
@@ -137,6 +129,8 @@ je_boshin_war_nip = {
 je_boshin_war_jap = {
 	is_shown_when_inactive = {
 		exists = c:JAP c:JAP = THIS
+		exists = c:NIP
+		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
 	possible = {
@@ -184,7 +178,6 @@ je_meiji_formation = {
 		c:NIP = ROOT
 
 		NOT = { has_global_variable = meiji_rework_complete }
-		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
 	immediate = {
@@ -200,8 +193,8 @@ je_meiji_formation = {
 
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
-			30 = jap_relation.40
+			400 = 0
+			10 = jap_relation.40
 			10 = jap_relation.30
 		}
 	}
@@ -253,9 +246,10 @@ je_bakufu_formation = {
 
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
-			10 = jap_relation.10
-			10 = jap_relation.20
+			400 = 0
+			25 = jap_relation.11
+			15 = jap_relation.10
+			5 = jap_relation.20
 		}
 	}
 
@@ -268,17 +262,6 @@ je_bakufu_formation = {
 					}
 				}
 			}
-	}
-
-	on_monthly_pulse = {
-		random_events = {
-			100 = 0
-			10 = exhibition_events.4
-			10 = exhibition_events.5
-			10 = exhibition_events.6
-			10 = exhibition_events.7
-			30 = exhibition_events.8
-		}
 	}
 
 	on_complete = {
@@ -295,10 +278,10 @@ je_support_meiji_bakufu = {
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	is_shown_when_inactive = {
-		country_has_primary_culture = cu:japanese
-
-		NOT ={ OR = {c:JAP = ROOT c:NIP = ROOT} }
-
+		is_subject_type = subject_type_daimyo
+		NOT = { c:JAP = ROOT }
+		NOT = { c:NIP = ROOT }
+		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
 	possible = {
@@ -306,7 +289,7 @@ je_support_meiji_bakufu = {
 	}
 
 	complete = {
-		c:JAP = {relations:root > 75}
+		c:JAP = {relations:root > 95}
 	}
 
 	on_complete = {
@@ -314,7 +297,7 @@ je_support_meiji_bakufu = {
 		trigger_event = { id = kurofune.43 }
 	}
 
-	fail = { c:NIP = {relations:root > 75} }
+	fail = { c:NIP = {relations:root > 95} }
 
 	on_fail = { 
 		c:NIP = { trigger_event = { id = kurofune.42 } } 

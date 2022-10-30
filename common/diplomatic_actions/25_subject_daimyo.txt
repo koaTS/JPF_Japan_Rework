@@ -3,28 +3,12 @@
 	should_notify_third_parties = yes
 	can_use_obligations = yes
 
+	potential = {
+		always = no
+	}
+
 	possible = {
-		is_at_war = no
-		scope:target_country = { is_at_war = no }
-		has_diplomatic_relevance = scope:target_country
-		is_revolutionary = no
-		scope:target_country = {
-			is_revolutionary = no
-		}
-		custom_tooltip = {
-			text = DIPLO_ACTION_MARKET_CONNECTION_REQUIRED
-			OR = {	
-				AND = {
-					market = { has_port = yes }
-					scope:target_country.market = { has_port = yes }
-				}
-				scope:actor.market = {
-					any_scope_country = {
-						is_adjacent = root
-					}
-				}
-			}
-		}		
+		always = no	
 	}
 
 	pact = {	
