@@ -201,16 +201,7 @@ je_meiji_formation = {
 
 	complete = {
 		has_technology_researched = nationalism
-		s:STATE_KANTO = {
-				any_scope_state = {
-					owner = {
-						OR = {
-							c:NIP = THIS
-							is_subject_of = c:NIP
-						}
-					}
-				}
-			}
+		owns_entire_state_region = STATE_KANTO
 	}
 
 	on_complete = {
@@ -255,13 +246,7 @@ je_bakufu_formation = {
 
 	complete = {
 		has_technology_researched = nationalism
-		s:STATE_KANSAI = {
-				any_scope_state = {
-					owner = {
-							c:JAP = THIS
-					}
-				}
-			}
+		owns_entire_state_region = STATE_KANSAI
 	}
 
 	on_complete = {

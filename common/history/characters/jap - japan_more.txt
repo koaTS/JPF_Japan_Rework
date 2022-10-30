@@ -228,4 +228,35 @@
 			}
 		}
 	}
+
+	c:GIS = {
+		create_character = {
+			ruler = yes
+			first_name = Dokugawa
+			last_name = Nariyuki
+			birth_date = 1801.10.16
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				arrogant
+				expensive_tastes # bit of corruption
+			}
+		}
+	}
+
+	c:ODA = {
+		create_character = {
+			ruler = yes
+			first_name = Ookubo
+			last_name = Tadanao
+			birth_date = 1829.05.20
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				arrogant
+				expensive_tastes # bit of corruption
+			}
+		}
+	}	
+
 }

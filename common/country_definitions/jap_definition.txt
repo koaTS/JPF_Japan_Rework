@@ -1,4 +1,4 @@
-JAP = {
+﻿JAP = {
 	color = { 194 53 60 }
 	country_type = unrecognized
 	
@@ -11,7 +11,7 @@ ODA = {
 	color = { 194 53 60 }
 	country_type = unrecognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { japanese }
 	capital = STATE_KANTO
@@ -20,7 +20,7 @@ GIS = {
 	color = { 194 53 60 }
 	country_type = unrecognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { japanese }
 	capital = STATE_KANTO

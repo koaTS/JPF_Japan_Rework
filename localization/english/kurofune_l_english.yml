@@ -1,13 +1,10 @@
-﻿?l_english:
-#decision
- boshin_decision: ""
- boshin_decision_desc: ""
+﻿l_english:
 
 # Heukseon Inner Port. The situation came back a year after the first expedition. Signed the Treaty of Peace and Friendship between the United States and Japan. Events for the Shogunate
  kurofune.10: ""
  kurofune.10.t: "The Return of Kurofune"
  kurofune.10.d: "Admiral Perry has returned to Japan after a year. Judging from the chaos within the shogunate and the lack of military power, there seems to be no other way than to open the port."
- kurofune.10.f: "Article 1. Eternal peace will be established between the two countries and the peoples of the United States and Japan, regardless of person or place.\nArticle 2. Shimoda and Hakodate ports will be opened\nArticle 9. United States give most-favored-nation treatment to
+ kurofune.10.f: "Article 1. Eternal peace will be established between the two countries and the peoples of the United States and Japan, regardless of person or place.\nArticle 2. Shimoda and Hakodate ports will be opened\nArticle 9. United States give most-favored-nation treatment to"
  kurofune.10.a: "Hundreds of years of isolation are over."
 #4 years later, the Treaty of Amity and Commerce between the United States and Japan. This is an event for the Emperor. Option a: Deny the treaty. Option b: Grant the treaty
  kurofune.20: ""
@@ -40,7 +37,7 @@
  kurofune.41: ""
  kurofune.41.t: "The Confluence of the Left"
  kurofune.41.d: "There are still a lot of people who say they need the shogunate. One daimyo wants to join the shogunate."
- kurofune.41.f: "The Emperor is a close friend of the Emperor himself, and there should be no harm to the prison.
+ kurofune.41.f: "The Emperor is a close friend of the Emperor himself, and there should be no harm to the prison."
  kurofune.41.a: "Welcome to the Shogunate."
 # Join the Emperor's side. It is a Japanese unification event chain. When the relationship level increases, it is merged with the emperor. A dummy event that happens to the emperor
  kurofune.42: ""

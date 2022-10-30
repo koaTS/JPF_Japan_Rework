@@ -1,3 +1,0 @@
-﻿subject_type_tributary = {
-	subservient_to_overlord = no
-}
