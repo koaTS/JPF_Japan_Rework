@@ -135,7 +135,6 @@ kurofune.30 = {
         default_option = yes
         c:JAP = {
         	add_journal_entry = {type = je_sakurada} 
-        	set_variable = {name = ansei_purge}
 
         		ig:ig_landowners = {
 	       			add_modifier = {
@@ -197,7 +196,6 @@ kurofune.31 = {
         default_option = yes
         c:JAP = {
         	add_journal_entry = {type = je_sakurada}
-       		set_variable = {name = ansei_purge}
 
        		ig:ig_landowners = {
 	        	add_modifier = {
@@ -251,7 +249,6 @@ kurofune.40 = {
 	}
 
 	immediate = {
-		set_variable = sakurada_complete
 		every_subject_or_below = {
 			limit = {is_subject_type = subject_type_daimyo}
 			change_relations = {

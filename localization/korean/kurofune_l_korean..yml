@@ -165,12 +165,10 @@
  je_sakurada_reason: "막부에게 불만을 품은 다이묘들이 많아졌습니다. 부디 조심하십시오."
 #천황용 보신전쟁 저널. 다이묘 3명을 회유하면 성공, 보신전쟁 발발
  je_boshin_war_nip: "내전의 그림자"
- je_boshin_war_nip_goal: "3명의 다이묘를 회유하라"
  je_boshin_goal: "3명의 다이묘를 회유하라"
  je_boshin_war_nip_reason: "현재 일본은 도막파와 좌막파로 갈라져 있습니다. 비밀리의 다이묘들에게 접촉하여 환심을 사고 도움을 구하십시오."
 #막부용 보신전쟁 저널. 다이묘 3명을 회유하면 성공, 보신전쟁 발발
  je_boshin_war_jap: "내전의 그림자"
- je_boshin_war_jap_goal: "3명의 다이묘를 회유하라"
  je_boshin_war_jap_reason: "현재 일본은 도막파와 좌막파로 갈라져 있습니다. 비밀리의 다이묘들에게 접촉하여 환심을 사고 도움을 구하십시오."
 #천황 승리시 일본통일 이벤트 발생
  je_meiji_formation: "일본 통일"

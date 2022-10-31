@@ -1527,7 +1527,18 @@ meiji.13 = {
 	option = {
 		name = meiji.13.a
 		default_option = yes
-		s:STATE_HOKKAIDO.region_state:buy_country_1 = { set_state_owner = c:JAP}
+		s:STATE_HOKKAIDO = {
+			random_scope_state = {
+				limit = {
+					owner = {
+							this = scope:buy_country_1
+						}
+					}
+				set_state_owner = c:JAP
+				}		
+		}
+		
+
 		add_modifier = {
 			name = modifier_hokkaido
 			multiplier = money_amount_multiplier_medium
