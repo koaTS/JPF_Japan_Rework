@@ -297,12 +297,6 @@ kurofune.41 = {
 	trigger = {
 	}
 
-	immediate = {
-		change_variable = {
-			name = boshin_var
-			add = 1
-		}	
-	}
 	option = { 
 		name = kurofune.41.a						
         default_option = yes
@@ -332,12 +326,6 @@ kurofune.42 = {
 	trigger = {
 	}
 
-	immediate = {
-		change_variable = {
-			name = boshin_var
-			add = 1
-		}	
-	}
 	option = { 
 		name = kurofune.42.a						
         default_option = yes

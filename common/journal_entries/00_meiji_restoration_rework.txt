@@ -94,18 +94,23 @@ je_boshin_war_nip = {
 	}
 
 	possible = {
-		has_technology_researched = nationalism
+		has_technology_researched = mass_communication
 	}
 
 	complete = {
 		# If-else clause to avoid errors because of missing variable before JE activates
 		trigger_if = {
-			limit = { exists = var:boshin_var }
-			scope:journal_entry = { is_goal_complete = yes }
+
+		any_scope_state = {
+
+			state_region = {
+				is_homeland = cu:japanese
+			}
+			count >= 4
 		}
-		trigger_else = {
-			custom_tooltip = je_boshin_goal
+
 		}
+		has_technology_researched = nationalism
 	}
 
 	
@@ -113,16 +118,7 @@ je_boshin_war_nip = {
 		trigger_event = { id = kurofune.53}
 	}
 
-
-	current_value = {
-		value = root.var:boshin_var
-	}
-
-	goal_add_value = {
-		value = 3
-	}
 	weight = 10000
-	progressbar = yes
 
 }
 
@@ -134,18 +130,18 @@ je_boshin_war_jap = {
 	}
 
 	possible = {
-		has_technology_researched = nationalism
+		has_technology_researched = mass_communication
 	}
 
 	complete = {
-		# If-else clause to avoid errors because of missing variable before JE activates
-		trigger_if = {
-			limit = { exists = var:boshin_var }
-			scope:journal_entry = { is_goal_complete = yes }
+		any_scope_state = {
+
+			state_region = {
+				is_homeland = cu:japanese
+			}
+			count >= 5
 		}
-		trigger_else = {
-			custom_tooltip = je_boshin_goal
-		}
+		has_technology_researched = nationalism
 	}
 
 	
@@ -153,16 +149,7 @@ je_boshin_war_jap = {
 		trigger_event = { id = kurofune.50}
 	}
 
-
-	current_value = {
-		value = root.var:boshin_var
-	}
-
-	goal_add_value = {
-		value = 3
-	}
 	weight = 10000
-	progressbar = yes
 
 }
 
@@ -178,13 +165,6 @@ je_meiji_formation = {
 		c:NIP = ROOT
 
 		NOT = { has_global_variable = meiji_rework_complete }
-	}
-
-	immediate = {
-		set_variable = {
-			name = boshin_var
-			value = 0
-		}
 	}
 
 	possible = {
@@ -223,12 +203,6 @@ je_bakufu_formation = {
 		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
-	immediate = {
-		set_variable = {
-			name = boshin_var
-			value = 0
-		}
-	}
 
 	possible = {
 		has_technology_researched = mass_communication

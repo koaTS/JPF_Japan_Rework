@@ -134,6 +134,9 @@ je_meiji_diplomacy = {
 			name = meiji_var
 			add = 1
 		}
+		trigger_event = {
+			id = meiji.13
+		}
 	}
 
 	on_monthly_pulse = {

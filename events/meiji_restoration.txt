@@ -1489,3 +1489,68 @@ meiji.12 = {
 
 	}
 }
+
+
+meiji.13 = {
+	type = country_event
+	placement = root
+	title = meiji.13.t
+	desc = meiji.13.d
+	flavor = meiji.13.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/asia_confucianism_shinto.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/confucianism_shinto" 
+
+	trigger = {
+		NOT = {owns_entire_state_region = STATE_HOKKAIDO}
+	}
+
+	immediate = {
+		random_country = {
+			limit = { 
+				has_state_in_state_region = STATE_HOKKAIDO
+				NOT ={ this = c:JAP }
+			}
+			save_scope_as = buy_country_1
+		}
+
+	}
+
+	option = {
+		name = meiji.13.a
+		default_option = yes
+		s:STATE_HOKKAIDO.region_state:buy_country_1 = { set_state_owner = c:JAP}
+		add_modifier = {
+			name = modifier_hokkaido
+			multiplier = money_amount_multiplier_medium
+			months = 60
+		}
+
+		scope:buy_country_1 = {
+			add_modifier = {
+				name = modifier_hokkaido_receive
+				multiplier = money_amount_multiplier_medium
+				months = 60
+			}
+		}
+
+	}
+
+	option = {
+		name = meiji.13.b
+		change_relations= {
+			country = scope:buy_country_1
+			value = 15
+		}
+	}
+
+
+}

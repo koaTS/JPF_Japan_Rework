@@ -105,6 +105,12 @@
  kurofune.102.f: "천황폐하야 말로 일본을 상징하는 인물! 그분에게 손을 댄 것은 그 어떤 이도 용서 받을 수 없는 일이다!"
  kurofune.102.a: "천황폐하를 보필하라."
 
+ meiji.13: "홋카이도 구매"
+ meiji.13.t: "홋카이도 구매"
+ meiji.13.d: "현재 일본 북부에 있는 홋카이도를 두고 일본과 [SCOPE.sCountry('buy_country_1').GetName](와)과의 마찰이 강해지고 있었다. 근래 그들의 외교관이 찾아와 말하길, 적당한 가격에 팔 수 있다고 하였다."
+ meiji.13.f: "홋카이도는 본래 신토에 속한 땅이나, 그동안 개발이 미뤄져 있는 미개척지였다. [SCOPE.sCountry('buy_country_1').GetName](이)가 대신 관리해주었다만, 정당한 땅의 주인은 본래 일본에 있음이 틀림 없다."
+ meiji.13.a: "그들에게 홋카이도를 구매하겠다는 제안을 보내라."
+ meiji.13.b: "그런 쓸모 없는 땅은 필요없다."
 
 #막부 관계도 이벤트. 막부 입장에서 a,b 와의 불화를 중재. 
  jap_relation.10: "번 간의 불화"
@@ -186,3 +192,5 @@ sakurada: "사쿠라다 문 밖의 변"
 satisfied_bakufu: "만족한 다이묘들"
 modifier_daimyo_relief: "다이묘 지원"
 modifier_daimyo_relief_receive: "다이묘 지원"
+modifier_hokkaido: "홋카이도 구매금"
+modifier_hokkaido_receive: "홋카이도 구매금"
