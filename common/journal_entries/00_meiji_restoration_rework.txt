@@ -88,8 +88,8 @@ je_sakurada = {
 
 je_boshin_war_nip = {
 	is_shown_when_inactive = {
-		exists = c:NIP c:NIP = THIS
-		exists = c:JAP
+		exists = c:NIP
+		c:NIP = ROOT
 		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
@@ -98,17 +98,12 @@ je_boshin_war_nip = {
 	}
 
 	complete = {
-		# If-else clause to avoid errors because of missing variable before JE activates
-		trigger_if = {
-
 		any_scope_state = {
 
 			state_region = {
 				is_homeland = cu:japanese
 			}
 			count >= 4
-		}
-
 		}
 		has_technology_researched = nationalism
 	}
@@ -124,8 +119,8 @@ je_boshin_war_nip = {
 
 je_boshin_war_jap = {
 	is_shown_when_inactive = {
-		exists = c:JAP c:JAP = THIS
-		exists = c:NIP
+		exists = c:JAP
+		c:JAP = ROOT
 		NOT = { has_global_variable = meiji_rework_complete }
 	}
 
