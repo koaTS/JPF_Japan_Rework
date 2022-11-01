@@ -1,4 +1,4 @@
-﻿EFAULT = {
+﻿
 JAP = { # Japan
 	dynamic_country_name = {
 		name = dyn_c_jap_shogunate
@@ -34,4 +34,3 @@ JAP = { # Japan
 }
 
 
-}
